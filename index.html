@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="auto">
 <head>
@@ -19,82 +18,423 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css"/>
 </head>
 
-<body>
+<body class="container">
 <!--<a class="vh-50" href="#main">Skip to main content</a>-->
 
-
-<main class="container">
-
 <!--  navbar-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <a class="navbar-brand" href="#">
-          <img class="img-fluid" src="assets/Logo.svg">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+        <img class="img-fluid" src="assets/Logo.svg">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-<!--          <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-<!--          <a class="nav-link" href="#">Skills</a>-->
-          <a class="nav-link" href="#resume">Resume</a>
-          <a class="nav-link" href="#">Contact</a>
+            <!--          <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+            <a class="nav-link" href="#Experience">Experience</a>
+            <a class="nav-link" href="#Education">Education & Certs</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#">Contact</a>
         </div>
-      </div>
-  </nav>
+    </div>
+</nav>
+
+<main>
+
 <!--    hero-->
     <div class="hero">
-        <h1 class="display-1 fw-bold text-center text-wrap">Designing the Future, One Pixel at a Time.</h1>
+<!--        <h1 class="display-1 fw-bold text-center text-wrap">Designing the Future, One Pixel at a Time.</h1>-->
+        <pre id="typewriter" class="display-2">
+<span class="let-highlight">let</span><i class="text-muted person"> person</i><span class=""> = {</span>
+    <span class="prop-highlight">firstName: </span><span class="string-highlight">'Christian'</span>,
+    <span class="prop-highlight">lastName: </span><span class="string-highlight">'Festa'</span>,
+    <span class="prop-highlight">location: </span><span class="string-highlight">'California'</span>,
+    <span class="prop-highlight">occupation: </span><span class="string-highlight">'System Integration'</span>,
+}; </pre>
+        <script id="rendered-js">
+            function setupTypewriter(t) {
+                var HTML = t.innerHTML;
+
+                t.innerHTML = "";
+
+                var cursorPosition = 0,
+                    tag = "",
+                    writingTag = false,
+                    tagOpen = false,
+                    typeSpeed = 60,
+                    tempTypeSpeed = 0;
+
+                var type = function () {
+
+                    if (writingTag === true) {
+                        tag += HTML[cursorPosition];
+                    }
+
+                    if (HTML[cursorPosition] === "<") {
+                        tempTypeSpeed = 0;
+                        if (tagOpen) {
+                            tagOpen = false;
+                            writingTag = true;
+                        } else {
+                            tag = "";
+                            tagOpen = true;
+                            writingTag = true;
+                            tag += HTML[cursorPosition];
+                        }
+                    }
+                    if (!writingTag && tagOpen) {
+                        tag.innerHTML += HTML[cursorPosition];
+                    }
+                    if (!writingTag && !tagOpen) {
+                        if (HTML[cursorPosition] === " ") {
+                            tempTypeSpeed = 0;
+                        } else
+                        {
+                            tempTypeSpeed = Math.random() * typeSpeed + 50;
+                        }
+                        t.innerHTML += HTML[cursorPosition];
+                    }
+                    if (writingTag === true && HTML[cursorPosition] === ">") {
+                        tempTypeSpeed = Math.random() * typeSpeed + 50;
+                        writingTag = false;
+                        if (tagOpen) {
+                            var newSpan = document.createElement("span");
+                            t.appendChild(newSpan);
+                            newSpan.innerHTML = tag;
+                            tag = newSpan.firstChild;
+                        }
+                    }
+
+                    cursorPosition += 1;
+                    if (cursorPosition < HTML.length - 1) {
+                        setTimeout(type, tempTypeSpeed);
+                    }
+
+                };
+
+                return {
+                    type: type };
+
+            }
+
+            var typer = document.getElementById('typewriter');
+
+            typewriter = setupTypewriter(typewriter);
+
+            typewriter.type();
+            //# sourceURL=pen.js
+        </script>
     </div>
-<!--    resume-->
+
+    <div class="lead pb-4">
+        <samp class="">Hello World!</samp> My name is <code class="">{return person.firstName + person.lastName}</code> <samp class=""> Christian Festa</samp>. I've worked as a System Integrator for over 14 years. I have managed multiple fully distributed, multi-geographical, and multi-continental teams of 30+ individuals.
+
+        based in Northern California. Over the years I developed a skill set in a range of technologies and frameworks, including Laravel, VueJS and Tailwind. Where I really value clean and readable code. Also I'm passionate about UX / UI. And last but not least, I am the proud father of two boys. I enjoy playing sports and I'm a little bit of a geek now and then.
+
+        Introducing an exceptional professional with over 10 years of enterprise-level technical experience in the public sector. With a proven track record in multifaceted environments encompassing both internal and public-facing systems, this individual brings a wealth of expertise to the table. They possess extensive knowledge and practical application of web content accessibility guidelines (WCAG) compliance, ensuring that digital platforms are inclusive and accessible to all users.
+
+        Additionally, their familiarity with federal compliance standards such as the Health Insurance Portability and Accountability Act (HIPAA) demonstrates their commitment to maintaining data security and privacy in sensitive environments. With direct experience in managing multi-geographic cross-functional teams of 30+ individuals, this professional excels at fostering collaboration and achieving collective goals.
+
+        Combining technical acumen, compliance proficiency, and exceptional team leadership skills, this individual is poised to make a significant impact in any organization requiring a seasoned expert in enterprise-level technical management within the public sector. Manage a fully distributed, multi, geographical, and continental team of 30+Created the Figma design system</div>
+
+
+<!--    experience-->
+    <div class="pb-4" id="Experience">
     <h2>
-        Resume
+        Experience
     </h2>
-        <div class="cards" id="resume">
-
-            <div class="card rounded-4">
-                <div class="card-header fs-5 fw-bold">
-                    Public Consulting Group
-                    <br>
-                    <span class="fs-6 small fw-normal">2022 - Present</span>
-                </div>
-                <div class="card-body">
-                    <div class="card-title fw-semibold">DevOps & Delivery Lead</div>
-                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="https://ca-path.com" target="_blank" class="btn btn-primary">View Project Website</a>
+        <p>Here is a summary of my most important skills and abilities</p>
+    <!--repeat for each gig-->
+    <div class="pt-2 pb-2">
+        <div class="row gap-4">
+            <div class="col text-secondary text-end">
+                2022 - Present
+            </div>
+            <div class="timeline col-sm-auto text-center">
+                <div class="circle rounded-full border w-5 h-5"></div>
+                <div class="vr h-100 overflow-y-visible" ></div>
+            </div>
+            <div class="col text-start">
+                <div class="card rounded-4">
+                    <div class="card-header fs-5 fw-bold">
+                        DevOps & Delivery Lead
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title fw-semibold">Public Consulting Group</div>
+                        <p class="card-text text-wrap">As a DevOps & Delivery Lead, I am responsible for the design, development, and integration (DDI) of a user and admin portal for a health and human services project.</p>
+                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-header fs-5 fw-bold">
-                    Unisys
-                    <br>
-                    <span class="fs-6 small fw-normal">2018 - 2022</span>
-                </div>
-                <div class="card-body">
-                    <div class="card-title fw-semibold">Product Manager & UX Design Lead</div>
-                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="https://ca-path.com" target="_blank" class="btn btn-primary">View Project Website</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header fs-5 fw-bold">
-                    Unisys
-                    <br>
-                    <span class="fs-6 small fw-normal">2018 - 2022</span>
-                </div>
-                <div class="card-body">
-                    <div class="card-title fw-semibold">Product Manager & UX Design Lead</div>
-                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="https://ca-path.com" target="_blank" class="btn btn-primary">View Project Website</a>
-                </div>
-            </div>
-
         </div>
     </div>
 
+    <!--repeat for each gig-->
+    <div class="pt-2 pb-2">
+        <div class="row gap-4">
+            <div class="col text-secondary text-end">
+                2018 - 2022
+            </div>
+            <div class="timeline col-sm-auto text-center">
+                <div class="circle rounded-full border w-5 h-5"></div>
+                <div class="vr h-100"></div>
+            </div>
+            <div class="col text-start">
+                <div class="card rounded-4">
+                    <div class="card-header fs-5 fw-bold">
+                        Product Manager & UX Design Lead
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title fw-semibold">Unisys</div>
+                        <p class="card-text text-wrap">As a Product Manager and UX Design Lead, I was responsible for the design, development, and integration (DDI) of a user portal for a health and human services project.</p>
+<!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--repeat for each gig-->
+    <div class="pt-2 pb-2">
+        <div class="row gap-4">
+            <div class="col text-secondary text-end">
+                2016 - 2018
+            </div>
+            <div class="timeline col-sm-auto text-center">
+                <div class="circle rounded-full border w-5 h-5"></div>
+                <div class="vr h-100"></div>
+            </div>
+            <div class="col text-start">
+                <div class="card rounded-4">
+                    <div class="card-header fs-5 fw-bold">
+                        Technical Consultant
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title fw-semibold">County Welfare Directors Association of California</div>
+                        <p class="card-text text-wrap">As a Technical Consultant, I worked on the independent verification and validation (IV&V) team for a health and human services project.</p>
+                        <!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--repeat for each gig-->
+    <div class="pt-2">
+        <div class="row gap-4">
+            <div class="col text-secondary text-end">
+                2009 - 2016
+            </div>
+            <div class="timeline col-sm-auto text-center">
+                <div class="circle rounded-full border w-5 h-5"></div>
+                <div class="vr h-100"></div>
+            </div>
+            <div class="col text-start">
+                <div class="card rounded-4">
+                    <div class="card-header fs-5 fw-bold">
+                        System Integration Consultant
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title fw-semibold">Unisys</div>
+                        <p class="card-text text-wrap">As a System Integration Consultant, I have experience in sales and worked on the delivery in a variety of management and operating (M&O) and on design, development, and integration (DDI) projects within the health and human services and criminal justice sectors.</p>
+                        <!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<!--    education-->
+<div class="pb-4" id="Education">
+    <h2>
+        Education & Certifications
+    </h2>
+    <p>Here is a summary of my most important skills and abilities</p>
+<div class="cards">
+    <div class="card rounded-4">
+        <div class="card-header fs-5 fw-bold">
+            <i class="bi bi-patch-check"></i>
+            Project Management Professional (PMP)
+<!--            <br>-->
+<!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+        </div>
+        <div class="card-body">
+<!--            <div class="card-title fw-semibold">DevOps & Delivery Lead</div>-->
+            <p class="card-text text-wrap">2014</p>
+<!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+        </div>
+    </div>
+
+    <div class="card rounded-4">
+        <div class="card-header fs-5 fw-bold"><i class="bi bi-patch-check"></i>
+            Bachelor of Science in Information Sciences and Technology
+<!--            <br>-->
+<!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+        </div>
+        <div class="card-body">
+            <div class="card-title fw-semibold">Pennsylvania State University<span class="text-muted fw-light ps-1">(University Park, PA)</span></div>
+            <p class="card-text text-wrap">2005 - 2009</p>
+<!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+        </div>
+    </div>
+</div>
+<!--        <div class="cards" id="resume">-->
+
+<!--            <div class="card rounded-4">-->
+<!--                <div class="card-header fs-5 fw-bold">-->
+<!--                    Public Consulting Group-->
+<!--                    <br>-->
+<!--                    <span class="fs-6 small fw-normal">2022 - Present</span>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-title fw-semibold">DevOps & Delivery Lead</div>-->
+<!--                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--                    <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="card rounded-4">-->
+<!--                <div class="card-header fs-5 fw-bold">-->
+<!--                    Unisys-->
+<!--                    <br>-->
+<!--                    <span class="fs-6 small fw-normal">2018 - 2022</span>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-title fw-semibold">Product Manager & UX Design Lead</div>-->
+<!--                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--&lt;!&ndash;                    <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View Project Website</a>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="card rounded-4">-->
+<!--                <div class="card-header fs-5 fw-bold">-->
+<!--                    County Welfare Directors Association of California-->
+<!--                    <br>-->
+<!--                    <span class="fs-6 small fw-normal">2016 - 2018</span>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-title fw-semibold">Technical Consultant</div>-->
+<!--                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--&lt;!&ndash;                    <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View Project Website</a>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="card rounded-4">-->
+<!--                <div class="card-header fs-5 fw-bold">-->
+<!--                    Unisys-->
+<!--                    <br>-->
+<!--                    <span class="fs-6 small fw-normal">2009 - 2016</span>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-title fw-semibold">System Integration Consultant</div>-->
+<!--                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--&lt;!&ndash;                    <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View Project Website</a>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="card rounded-4">-->
+<!--                <div class="card-header fs-5 fw-bold"><i class="bi bi-code-square pe-1"></i>-->
+<!--                    Resume Coding-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-title fw-semibold">Product Manager & UX Design Lead</div>-->
+<!--                    <p class="card-text text-wrap">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--                    <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View on GitHub</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+    <div id="skills">
+    <h2>
+        Skills
+    </h2>
+        <p>Here is a summary of my most important skills and abilities</p>
+        <div class="skills">
+            <div class="badges">
+                <p class="mb-0 fw-medium">Coding</p>
+                <span class="badge rounded-pill text-bg-info">Bash Script</span>
+                <span class="badge rounded-pill text-bg-info">Bootstrap</span>
+                <span class="badge rounded-pill text-bg-info">CSS</span>
+                <span class="badge rounded-pill text-bg-info">HTML</span>
+                <span class="badge rounded-pill text-bg-info">JavaScript</span>
+                <span class="badge rounded-pill text-bg-info">JSON</span>
+                <span class="badge rounded-pill text-bg-info">SQL</span>
+                <span class="badge rounded-pill text-bg-info">WCAG (Accessibility)</span>
+
+
+
+            </div>
+            <div class="badges">
+                <p class="mb-0 fw-medium">Tools</p>
+                <span class="badge rounded-pill text-bg-primary">Aha!</span>
+                <span class="badge rounded-pill text-bg-primary">AWS</span>
+                <span class="badge rounded-pill text-bg-primary">Confluence</span>
+                <span class="badge rounded-pill text-bg-primary">Figma</span>
+                <span class="badge rounded-pill text-bg-primary">Github</span>
+                <span class="badge rounded-pill text-bg-primary">IntelliJ</span>
+                <span class="badge rounded-pill text-bg-primary">Jira</span>
+                <span class="badge rounded-pill text-bg-primary">MacOS</span>
+            </div>
+        </div>
+
+    </div>
+<!--    table-->
+<!--    <table class="table">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th scope="col">Languages & Libraries</th>-->
+<!--            <th scope="col">First</th>-->
+<!--            <th scope="col">Last</th>-->
+<!--            <th scope="col">Handle</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <td>HTML</td>-->
+<!--            <td>Mark</td>-->
+<!--            <td>Otto</td>-->
+<!--            <td>@mdo</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>CSS</td>-->
+<!--            <td>Jacob</td>-->
+<!--            <td>Thornton</td>-->
+<!--            <td>@fat</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Bootstrap</td>-->
+<!--            <td colspan="2">Larry the Bird</td>-->
+<!--            <td>@twitter</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>JavaScript</td>-->
+<!--            <td colspan="2">Larry the Bird</td>-->
+<!--            <td>@twitter</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>RegEx</td>-->
+<!--            <td colspan="2">Larry the Bird</td>-->
+<!--            <td>@twitter</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>WCAG (Accessibility)</td>-->
+<!--            <td colspan="2">Larry the Bird</td>-->
+<!--            <td>@twitter</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+
+
+
 </main>
+
+
+
+
+
+
 
 </body>
 </html>
