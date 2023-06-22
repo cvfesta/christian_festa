@@ -3,14 +3,14 @@
 }
 /*typewriter*/
 .let-highlight{
-    color: #DF8B56;
+    color: #7ee787;
 }
 .prop-highlight{
     color: #E098F9;
 }
-.string-highlight{
-    color: #6DB14F;
-}
+/*.string-highlight{*/
+/*    color: #6DB14F;*/
+/*}*/
 /*#typewriter {*/
 /*    font-size: 2em;*/
 /*    margin: 0;*/
@@ -90,4 +90,49 @@
 }
 .timeline{
     padding-bottom: .25rem!important;
+}
+
+/*@media (min-width: 1400px) {*/
+/*    #typewriter{*/
+/*        font-size: calc(1.625rem + 4.5vw);*/
+/*        font-weight: 300;*/
+/*        line-height: 1.2;*/
+/*    }*/
+
+/*}*/
+@media (min-width: 1400px) {
+    #typewriter{
+        font-size: 3.63rem;
+    }
+
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #typewriter{
+        font-size: 3.13rem;
+    }
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #typewriter{
+        font-size: 2.62rem;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #typewriter{
+        font-size: 1.95rem;
+    }
+
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    #typewriter{
+        font-size: 1.44rem;
+    }
+
+}
+@media (max-width: 575px) {
+    #typewriter{
+        font-size: 4.23vw;
+    }
+
 }
