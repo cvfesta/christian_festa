@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="auto">
+<html lang="en" dir="ltr" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -31,18 +31,19 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse justify-content-end navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-link" href="#Experience">Experience</a>
             <a class="nav-link" href="#Education">Education</a>
             <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal" href="#">Contact</a>
         </div>
     </div>
 </nav>
 </header>
 
 <main>
+
 <!--    hero-->
     <div class="hero">
 <!--        <h1 class="display-1 fw-bold text-center text-wrap">Designing the Future, One Pixel at a Time.</h1>-->
@@ -128,7 +129,7 @@
         </script>
     </div>
 
-    <div class="lead pb-4">
+    <div class="lead">
         <p><samp class="">Hello World!</samp> My name is <code class="">{return person.firstName + person.lastName}</code> <samp class=""> Christian Festa</samp>. Throughout the tenure of my career, I have worked as a <code class="">{return person.occupation}</code> <samp>System Integrator</samp> on enterprise-level projects in the public sector. I have direct experience managing fully distributed, multi-geographical, and multi-continental teams of up to 50+ individuals.</p>
 
         <p>Over the years, I developed a range of skills using technologies and frameworks, such as <samp>Figma</samp> and <samp>Bootstrap</samp> which were used to design and develop this site.</p>
@@ -139,22 +140,23 @@
     </div>
 
 <!--    experience-->
-    <div class="pb-4" id="Experience">
-    <h2>
-        Experience
-    </h2>
-        <p>Here is a summary of my experience. A detailed project breakdown can be requested through the contact form.</p>
-    <!--repeat for each gig-->
-    <div class="pt-3 pb-2">
-        <div class="row gap-4">
-            <div class="col text-secondary text-end">
-                2022 - Present
-            </div>
-            <div class="timeline col-sm-auto text-center">
-                <div class="circle rounded-full border w-5 h-5"></div>
-                <div class="vr h-100 overflow-y-visible" ></div>
-            </div>
-            <div class="col text-start">
+    <div class="pt-4" id="Experience">
+        <h2 class="experience">
+            Experience
+        </h2>
+        <p>Here is a summary of my experience. A detailed project breakdown can be requested through the <a data-bs-toggle="modal" data-bs-target="#contactModal" class="">contact</a> form.</p>
+
+        <div class="experience-parent">
+
+            <!--            child-->
+            <div class="experience-child">
+                <div class="experience-date">
+                    2022 - Present
+                </div>
+                <div class="timeline text-center">
+                    <div class="circle rounded-full border w-5 h-5"></div>
+                    <div class="vr h-100" ></div>
+                </div>
                 <div class="card rounded-4">
                     <div class="card-header fs-5 fw-bold">
                         DevOps & Delivery Lead
@@ -166,20 +168,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!--repeat for each gig-->
-    <div class="pt-2 pb-2">
-        <div class="row gap-4">
-            <div class="col text-secondary text-end">
-                2018 - 2022
-            </div>
-            <div class="timeline col-sm-auto text-center">
-                <div class="circle rounded-full border w-5 h-5"></div>
-                <div class="vr h-100"></div>
-            </div>
-            <div class="col text-start">
+            <!--            child-->
+            <div class="experience-child">
+                <div class="experience-date">
+                    2018 - 2022
+                </div>
+                <div class="timeline text-center">
+                    <div class="circle rounded-full border w-5 h-5"></div>
+                    <div class="vr h-100" ></div>
+                </div>
                 <div class="card rounded-4">
                     <div class="card-header fs-5 fw-bold">
                         Product Manager & UX Design Lead
@@ -187,24 +185,19 @@
                     <div class="card-body">
                         <div class="card-title fw-semibold">Unisys</div>
                         <p class="card-text text-wrap">As a Product Manager and UX Design Lead, I was responsible for the design, development, and integration (DDI) of a user portal for a health and human services project.</p>
-<!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!--repeat for each gig-->
-    <div class="pt-2 pb-2">
-        <div class="row gap-4">
-            <div class="col text-secondary text-end">
-                2016 - 2018
-            </div>
-            <div class="timeline col-sm-auto text-center">
-                <div class="circle rounded-full border w-5 h-5"></div>
-                <div class="vr h-100"></div>
-            </div>
-            <div class="col text-start">
+            <!--            child-->
+            <div class="experience-child">
+                <div class="experience-date">
+                    2016 - 2018
+                </div>
+                <div class="timeline text-center">
+                    <div class="circle rounded-full border w-5 h-5"></div>
+                    <div class="vr h-100" ></div>
+                </div>
                 <div class="card rounded-4">
                     <div class="card-header fs-5 fw-bold">
                         Technical Consultant
@@ -212,24 +205,19 @@
                     <div class="card-body">
                         <div class="card-title fw-semibold">County Welfare Directors Association of California</div>
                         <p class="card-text text-wrap">As a Technical Consultant, I worked on the independent verification and validation (IV&V) team for a health and human services project.</p>
-                        <!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!--repeat for each gig-->
-    <div class="pt-2">
-        <div class="row gap-4">
-            <div class="col text-secondary text-end">
-                2009 - 2016
-            </div>
-            <div class="timeline col-sm-auto text-center">
-                <div class="circle rounded-full border w-5 h-5"></div>
-                <div class="vr h-100"></div>
-            </div>
-            <div class="col text-start">
+            <!--            child-->
+            <div class="experience-child">
+                <div class="experience-date">
+                    2009 - 2016
+                </div>
+                <div class="timeline text-center">
+                    <div class="circle rounded-full border w-5 h-5"></div>
+                    <div class="" ></div>
+                </div>
                 <div class="card rounded-4">
                     <div class="card-header fs-5 fw-bold">
                         System Integration Consultant
@@ -237,63 +225,168 @@
                     <div class="card-body">
                         <div class="card-title fw-semibold">Unisys</div>
                         <p class="card-text text-wrap">As a System Integration Consultant, I have experience in sales and worked on the delivery in a variety of management and operating (M&O) and on design, development, and integration (DDI) projects within the health and human services and criminal justice sectors.</p>
-                        <!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
-    </div>
+
+
+
+
+<!--    &lt;!&ndash;repeat for each gig&ndash;&gt;-->
+<!--    <div class="pt-3 pb-2">-->
+<!--        <div class="row gap-4">-->
+<!--            <div class="col text-secondary text-end">-->
+<!--                2022 - Present-->
+<!--            </div>-->
+<!--            <div class="timeline col-sm-auto text-center">-->
+<!--                <div class="circle rounded-full border w-5 h-5"></div>-->
+<!--                <div class="vr h-100 overflow-y-visible" ></div>-->
+<!--            </div>-->
+<!--            <div class="col text-start">-->
+<!--                <div class="card rounded-4">-->
+<!--                    <div class="card-header fs-5 fw-bold">-->
+<!--                        DevOps & Delivery Lead-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-title fw-semibold">Public Consulting Group</div>-->
+<!--                        <p class="card-text text-wrap">As a DevOps & Delivery Lead, I am responsible for the design, development, and integration (DDI) of a user and admin portal for a health and human services project.</p>-->
+<!--                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;repeat for each gig&ndash;&gt;-->
+<!--    <div class="pt-2 pb-2">-->
+<!--        <div class="row gap-4">-->
+<!--            <div class="col text-secondary text-end">-->
+<!--                2018 - 2022-->
+<!--            </div>-->
+<!--            <div class="timeline col-sm-auto text-center">-->
+<!--                <div class="circle rounded-full border w-5 h-5"></div>-->
+<!--                <div class="vr h-100"></div>-->
+<!--            </div>-->
+<!--            <div class="col text-start">-->
+<!--                <div class="card rounded-4">-->
+<!--                    <div class="card-header fs-5 fw-bold">-->
+<!--                        Product Manager & UX Design Lead-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-title fw-semibold">Unisys</div>-->
+<!--                        <p class="card-text text-wrap">As a Product Manager and UX Design Lead, I was responsible for the design, development, and integration (DDI) of a user portal for a health and human services project.</p>-->
+<!--&lt;!&ndash;                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;repeat for each gig&ndash;&gt;-->
+<!--    <div class="pt-2 pb-2">-->
+<!--        <div class="row gap-4">-->
+<!--            <div class="col text-secondary text-end">-->
+<!--                2016 - 2018-->
+<!--            </div>-->
+<!--            <div class="timeline col-sm-auto text-center">-->
+<!--                <div class="circle rounded-full border w-5 h-5"></div>-->
+<!--                <div class="vr h-100"></div>-->
+<!--            </div>-->
+<!--            <div class="col text-start">-->
+<!--                <div class="card rounded-4">-->
+<!--                    <div class="card-header fs-5 fw-bold">-->
+<!--                        Technical Consultant-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-title fw-semibold">County Welfare Directors Association of California</div>-->
+<!--                        <p class="card-text text-wrap">As a Technical Consultant, I worked on the independent verification and validation (IV&V) team for a health and human services project.</p>-->
+<!--                        &lt;!&ndash;                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;repeat for each gig&ndash;&gt;-->
+<!--    <div class="pt-2">-->
+<!--        <div class="row gap-4">-->
+<!--            <div class="col text-secondary text-end">-->
+<!--                2009 - 2016-->
+<!--            </div>-->
+<!--            <div class="timeline col-sm-auto text-center">-->
+<!--                <div class="circle rounded-full border w-5 h-5"></div>-->
+<!--                <div class="vr h-100"></div>-->
+<!--            </div>-->
+<!--            <div class="col text-start">-->
+<!--                <div class="card rounded-4">-->
+<!--                    <div class="card-header fs-5 fw-bold">-->
+<!--                        System Integration Consultant-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-title fw-semibold">Unisys</div>-->
+<!--                        <p class="card-text text-wrap">As a System Integration Consultant, I have experience in sales and worked on the delivery in a variety of management and operating (M&O) and on design, development, and integration (DDI) projects within the health and human services and criminal justice sectors.</p>-->
+<!--                        &lt;!&ndash;                        <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
 
 <!--    education-->
-<div class="pt-3 pb-4" id="Education">
-    <h2>
-        Education & Certifications
+<div class="pt-4" id="Education">
+    <h2 class="education">
+        Education
     </h2>
-    <p>Here is a summary of my most important skills and abilities</p>
-<div class="cards">
+    <p>Here is my education and certifications.</p>
+    <div class="cards">
 
-    <div class="card rounded-4">
-        <div class="card-header fs-5 fw-bold">
-            <i class="fa-solid fa-award"></i>
-            Google User Experience (UX) Design Certification
-            <!--            <br>-->
-            <!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+        <div class="card rounded-4">
+            <div class="card-header fs-5 fw-bold">
+                <i class="fa-solid fa-award"></i>
+                Google User Experience (UX) Design Certification
+                <!--            <br>-->
+                <!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+            </div>
+            <div class="card-body">
+                <!--            <div class="card-title fw-semibold">DevOps & Delivery Lead</div>-->
+                <p class="card-text text-wrap">2021</p>
+                <!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+            </div>
         </div>
-        <div class="card-body">
-            <!--            <div class="card-title fw-semibold">DevOps & Delivery Lead</div>-->
-            <p class="card-text text-wrap">2021</p>
-            <!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
-        </div>
-    </div>
 
-    <div class="card rounded-4">
-        <div class="card-header fs-5 fw-bold">
-            <i class="fa-solid fa-award"></i>
-            Project Management Professional (PMP)
-<!--            <br>-->
-<!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+        <div class="card rounded-4">
+            <div class="card-header fs-5 fw-bold">
+                <i class="fa-solid fa-award"></i>
+                Project Management Professional (PMP) Certification
+                <!--            <br>-->
+                <!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+            </div>
+            <div class="card-body">
+                <!--            <div class="card-title fw-semibold">DevOps & Delivery Lead</div>-->
+                <p class="card-text text-wrap">2014</p>
+                <!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+            </div>
         </div>
-        <div class="card-body">
-<!--            <div class="card-title fw-semibold">DevOps & Delivery Lead</div>-->
-            <p class="card-text text-wrap">2014</p>
-<!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
-        </div>
-    </div>
 
-    <div class="card rounded-4">
-        <div class="card-header fs-5 fw-bold"><i class="fa-solid fa-graduation-cap"></i>
-            Bachelor of Science in Information Sciences and Technology
-<!--            <br>-->
-<!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
-        </div>
-        <div class="card-body">
-            <div class="card-title fw-semibold">Pennsylvania State University<span class="text-muted fw-light ps-1">(University Park, PA)</span></div>
-            <p class="card-text text-wrap">2005 - 2009</p>
-<!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+        <div class="card rounded-4">
+            <div class="card-header fs-5 fw-bold"><i class="fa-solid fa-graduation-cap"></i>
+                Bachelor of Science in Information Sciences and Technology
+                <!--            <br>-->
+                <!--            <span class="fs-6 small fw-normal">2022 - Present</span>-->
+            </div>
+            <div class="card-body">
+                <div class="card-title fw-semibold">Pennsylvania State University<span class="text-muted fw-light ps-1">(University Park, PA)</span></div>
+                <p class="card-text text-wrap">2005 - 2009</p>
+                <!--            <a href="https://ca-path.com" target="_blank" class="btn btn-outline-info">View ca-path.com</a>-->
+            </div>
         </div>
     </div>
 </div>
+
 <!--        <div class="cards" id="resume">-->
 
 <!--            <div class="card rounded-4">-->
@@ -360,85 +453,37 @@
 <!--            </div>-->
 
 <!--        </div>-->
-    <div class="pt-3" id="skills">
-    <h2>
-        Skills
-    </h2>
-        <p>Here is a summary of my most important skills and abilities</p>
+    <div class="pt-4" id="skills">
+        <h2 class="skills text-info">
+            Skills
+        </h2>
+        <p>Here is a summary of my most important skills and abilities.</p>
         <div class="skills">
             <div class="badges">
-                <p class="mb-0 fw-medium">Coding</p>
-                <span class="badge rounded-pill text-bg-info">Bash Script</span>
-                <span class="badge rounded-pill text-bg-info">Bootstrap</span>
-                <span class="badge rounded-pill text-bg-info">CSS</span>
-                <span class="badge rounded-pill text-bg-info">HTML</span>
-                <span class="badge rounded-pill text-bg-info">JavaScript</span>
-                <span class="badge rounded-pill text-bg-info">JSON</span>
-                <span class="badge rounded-pill text-bg-info">SQL</span>
-                <span class="badge rounded-pill text-bg-info">WCAG (Accessibility)</span>
-
-
-
+                <p class="mb-0 fs-5 fw-medium">Coding</p>
+                <span class="badge fs-6 rounded-pill text-bg-info">Bash Script</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">Bootstrap</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">CSS</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">HTML</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">JavaScript</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">JSON</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">SQL</span>
+                <span class="badge fs-6 rounded-pill text-bg-info">WCAG (Accessibility)</span>
             </div>
+
             <div class="badges">
-                <p class="mb-0 fw-medium">Tools</p>
-                <span class="badge rounded-pill text-bg-primary">Aha!</span>
-                <span class="badge rounded-pill text-bg-primary">AWS</span>
-                <span class="badge rounded-pill text-bg-primary">Confluence</span>
-                <span class="badge rounded-pill text-bg-primary">Figma</span>
-                <span class="badge rounded-pill text-bg-primary">Github</span>
-                <span class="badge rounded-pill text-bg-primary">IntelliJ</span>
-                <span class="badge rounded-pill text-bg-primary">Jira</span>
-                <span class="badge rounded-pill text-bg-primary">MacOS</span>
+                <p class="mb-0 fs-5 fw-medium">Tools</p>
+                <span class="badge fs-6 fs-6 rounded-pill text-bg-primary">Aha!</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">AWS</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">Confluence</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">Figma</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">Github</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">IntelliJ</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">Jira</span>
+                <span class="badge fs-6 rounded-pill text-bg-primary">MacOS</span>
             </div>
         </div>
-
     </div>
-<!--    table-->
-<!--    <table class="table">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th scope="col">Languages & Libraries</th>-->
-<!--            <th scope="col">First</th>-->
-<!--            <th scope="col">Last</th>-->
-<!--            <th scope="col">Handle</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr>-->
-<!--            <td>HTML</td>-->
-<!--            <td>Mark</td>-->
-<!--            <td>Otto</td>-->
-<!--            <td>@mdo</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>CSS</td>-->
-<!--            <td>Jacob</td>-->
-<!--            <td>Thornton</td>-->
-<!--            <td>@fat</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>Bootstrap</td>-->
-<!--            <td colspan="2">Larry the Bird</td>-->
-<!--            <td>@twitter</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>JavaScript</td>-->
-<!--            <td colspan="2">Larry the Bird</td>-->
-<!--            <td>@twitter</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>RegEx</td>-->
-<!--            <td colspan="2">Larry the Bird</td>-->
-<!--            <td>@twitter</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>WCAG (Accessibility)</td>-->
-<!--            <td colspan="2">Larry the Bird</td>-->
-<!--            <td>@twitter</td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
 
     <!-- Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
@@ -503,17 +548,12 @@
         </div>
     </div>
 
-
-
 </main>
 
-
-
-
 <!-- Footer -->
-<footer class="d-flex flex-wrap justify-content-around align-items-center pt-3 mt-4 text-muted border-top small">
+<footer class="d-flex flex-wrap justify-content-around align-items-center py-3 mt-4 text-muted border-top small">
     <p class="mb-0">© <span class="date" id="date"></span> Christian Festa</p>
-    <i class="bi bi-balloon-heart"></i>
+    <img class="" src="assets/Logo.svg">
 
     <ul class="list-group border border-0 list-group-horizontal">
         <a href="#Experience" class="list-group-item border border-0 list-group-item-action text-muted">Experience</a>

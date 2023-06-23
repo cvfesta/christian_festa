@@ -1,12 +1,21 @@
 :root{
     --gap:1.5rem;
+    --cs-green: #7ee787;
+    --cs-purple: #E098F9;
 }
+.experience{
+    color: var(--cs-green);
+}
+.education{
+    color: var(--cs-purple);
+}
+
 /*typewriter*/
 .let-highlight{
-    color: #7ee787;
+    color: var(--cs-green);
 }
 .prop-highlight{
-    color: #E098F9;
+    color: var(--cs-purple);
 }
 /*.string-highlight{*/
 /*    color: #6DB14F;*/
@@ -36,16 +45,40 @@
 }
 
 .hero{
-    height: calc(100vh - 13.125rem);
+    height: calc(100vh - 7.125rem);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
     /*justify-content: center;*/
     align-items: center;
     /*background-image: url("/assets/hero_bg.png");*/
     /*background-repeat: no-repeat;*/
     /*background-size: contain;*/
     /*background-position: center;*/
+}
+
+.experience-parent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /*justify-content: flex-start;*/
+    /*align-items: flex-start;*/
+    row-gap: 1rem;
+}
+.experience-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--gap);
+}
+.experience-date{
+    width: 7rem!important;
+    flex-shrink: 0;
+}
+@media(max-width: 575px) {
+    .experience-date{
+        width: 5rem!important;
+    }
 }
 .cards, .skills {
     display: flex;
@@ -70,11 +103,14 @@
 
 /*badges*/
 .text-bg-info {
-    color: RGBA(13,202,240,var(--bs-bg-opacity,1))!important;
+    /*color: RGBA(13,202,240,var(--bs-bg-opacity,1))!important;*/
+    color: rgb(126 231 135)!important;
+    /*color: rgb(224 152 249)!important;*/
     background-color: RGBA(13,202,240,var(--bs-bg-opacity ,10%))!important;
 }
 .text-bg-primary {
-    color: RGBA(13,110,253,var(--bs-bg-opacity,1))!important;
+    /*color: RGBA(13,110,253,var(--bs-bg-opacity,1))!important;*/
+    color: rgb(224 152 249)!important;
     background-color: RGBA(13,110,253,var(--bs-bg-opacity,10%))!important;
 }
 /*resume*/
@@ -84,7 +120,8 @@
 .circle{
     border-width: .15rem!important;
     border-radius: 99rem;
-    border-color: #c7c8c9!important;
+    /*border-color: #c7c8c9!important;*/
+    border-color: var(--bs-body-color);
     height: 1.25rem;
     width: 1.25rem;
 }
