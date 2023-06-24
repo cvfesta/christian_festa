@@ -3,10 +3,10 @@
     --cs-green: #7ee787;
     --cs-purple: #E098F9;
 }
-.experience{
+.experience, .fa-envelope{
     color: var(--cs-green);
 }
-.education{
+.education, .modal-title{
     color: var(--cs-purple);
 }
 
@@ -172,4 +172,7 @@
         font-size: 4.23vw;
     }
 
+}
+.contactTextarea{
+    min-height: 6rem!important;
 }
