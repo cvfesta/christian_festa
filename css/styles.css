@@ -1,5 +1,5 @@
 :root{
-    --gap:1.5rem;
+    --gap:1rem;
     --cs-green: #7ee787;
     --cs-purple: #E098F9;
 }
@@ -72,12 +72,12 @@
     gap: var(--gap);
 }
 .experience-date{
-    width: 7rem!important;
+    width: 7.1rem!important;
     flex-shrink: 0;
 }
 @media(max-width: 575px) {
     .experience-date{
-        width: 5rem!important;
+        width: 4rem!important;
     }
 }
 .cards, .skills {
@@ -175,4 +175,12 @@
 }
 .contactTextarea{
     min-height: 6rem!important;
+}
+.cert-card {
+    /*align-items: center;*/
+    background-color: rgba(var(--bs-body-color-rgb), 0.03);
+    flex-grow: 100;
+}
+.fa-solid {
+    font-size: 3rem;
 }
