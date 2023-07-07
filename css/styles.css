@@ -6,7 +6,7 @@
 .experience, .fa-envelope{
     color: var(--cs-green);
 }
-.education, .modal-title{
+.education, .modal-title, .text-pink{
     color: var(--cs-purple);
 }
 
@@ -102,16 +102,21 @@
 }
 
 /*badges*/
-.text-bg-info {
+.badge-green {
     /*color: RGBA(13,202,240,var(--bs-bg-opacity,1))!important;*/
     color: rgb(126 231 135)!important;
     /*color: rgb(224 152 249)!important;*/
     background-color: RGBA(13,202,240,var(--bs-bg-opacity ,10%))!important;
 }
-.text-bg-primary {
+.badge-pink {
     /*color: RGBA(13,110,253,var(--bs-bg-opacity,1))!important;*/
     color: rgb(224 152 249)!important;
-    background-color: RGBA(13,110,253,var(--bs-bg-opacity,10%))!important;
+    background-color: RGBA(224,152,249,var(--bs-bg-opacity,10%))!important;
+}
+.badge-blue {
+    /*color: RGBA(13,110,253,var(--bs-bg-opacity,1))!important;*/
+    color: #0dcaf0!important;
+    background-color: RGBA(13,202,240,var(--bs-bg-opacity,15%))!important
 }
 /*resume*/
 .vr{
