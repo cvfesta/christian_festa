@@ -189,3 +189,20 @@
 .fa-solid {
     font-size: 3rem;
 }
+/*start of visible on scroll*/
+/*.visibleDiv{*/
+/*    animation: opacity-animation 1.25s forwards;*/
+/*}*/
+/*!*@keyframes visibleDiv {*!*/
+/*!*    from { opacity: 0; }*!*/
+/*!*    to { opacity: 1;}*!*/
+/*!*}*!*/
+/*@keyframes opacity-animation {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*    }*/
+
+/*    to {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
