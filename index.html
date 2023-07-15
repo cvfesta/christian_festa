@@ -77,79 +77,81 @@
                 <span class="text-info">'UX Designer'</span>,
                 <span class="text-info">'Developer']</span>;
 }; </pre>
-        <script id="rendered-js">
-            function setupTypewriter(t) {
-                var HTML = t.innerHTML;
+        <script src="assets/js/typewriter.js"></script>
 
-                t.innerHTML = "";
+<!--        <script id="rendered-js">-->
+<!--            function setupTypewriter(t) {-->
+<!--                var HTML = t.innerHTML;-->
 
-                var cursorPosition = 0,
-                    tag = "",
-                    writingTag = false,
-                    tagOpen = false,
-                    typeSpeed = 1,
-                    tempTypeSpeed = 0;
+<!--                t.innerHTML = "";-->
 
-                var type = function () {
+<!--                var cursorPosition = 0,-->
+<!--                    tag = "",-->
+<!--                    writingTag = false,-->
+<!--                    tagOpen = false,-->
+<!--                    typeSpeed = 1,-->
+<!--                    tempTypeSpeed = 0;-->
 
-                    if (writingTag === true) {
-                        tag += HTML[cursorPosition];
-                    }
+<!--                var type = function () {-->
 
-                    if (HTML[cursorPosition] === "<") {
-                        tempTypeSpeed = 0;
-                        if (tagOpen) {
-                            tagOpen = false;
-                            writingTag = true;
-                        } else {
-                            tag = "";
-                            tagOpen = true;
-                            writingTag = true;
-                            tag += HTML[cursorPosition];
-                        }
-                    }
-                    if (!writingTag && tagOpen) {
-                        tag.innerHTML += HTML[cursorPosition];
-                    }
-                    if (!writingTag && !tagOpen) {
-                        if (HTML[cursorPosition] === " ") {
-                            tempTypeSpeed = 0;
-                        } else
-                        {
-                            tempTypeSpeed = Math.random() * typeSpeed + 50;
-                        }
-                        t.innerHTML += HTML[cursorPosition];
-                    }
-                    if (writingTag === true && HTML[cursorPosition] === ">") {
-                        tempTypeSpeed = Math.random() * typeSpeed + 50;
-                        writingTag = false;
-                        if (tagOpen) {
-                            var newSpan = document.createElement("span");
-                            t.appendChild(newSpan);
-                            newSpan.innerHTML = tag;
-                            tag = newSpan.firstChild;
-                        }
-                    }
+<!--                    if (writingTag === true) {-->
+<!--                        tag += HTML[cursorPosition];-->
+<!--                    }-->
 
-                    cursorPosition += 1;
-                    if (cursorPosition < HTML.length - 1) {
-                        setTimeout(type, tempTypeSpeed);
-                    }
+<!--                    if (HTML[cursorPosition] === "<") {-->
+<!--                        tempTypeSpeed = 0;-->
+<!--                        if (tagOpen) {-->
+<!--                            tagOpen = false;-->
+<!--                            writingTag = true;-->
+<!--                        } else {-->
+<!--                            tag = "";-->
+<!--                            tagOpen = true;-->
+<!--                            writingTag = true;-->
+<!--                            tag += HTML[cursorPosition];-->
+<!--                        }-->
+<!--                    }-->
+<!--                    if (!writingTag && tagOpen) {-->
+<!--                        tag.innerHTML += HTML[cursorPosition];-->
+<!--                    }-->
+<!--                    if (!writingTag && !tagOpen) {-->
+<!--                        if (HTML[cursorPosition] === " ") {-->
+<!--                            tempTypeSpeed = 0;-->
+<!--                        } else-->
+<!--                        {-->
+<!--                            tempTypeSpeed = Math.random() * typeSpeed + 50;-->
+<!--                        }-->
+<!--                        t.innerHTML += HTML[cursorPosition];-->
+<!--                    }-->
+<!--                    if (writingTag === true && HTML[cursorPosition] === ">") {-->
+<!--                        tempTypeSpeed = Math.random() * typeSpeed + 50;-->
+<!--                        writingTag = false;-->
+<!--                        if (tagOpen) {-->
+<!--                            var newSpan = document.createElement("span");-->
+<!--                            t.appendChild(newSpan);-->
+<!--                            newSpan.innerHTML = tag;-->
+<!--                            tag = newSpan.firstChild;-->
+<!--                        }-->
+<!--                    }-->
 
-                };
+<!--                    cursorPosition += 1;-->
+<!--                    if (cursorPosition < HTML.length - 1) {-->
+<!--                        setTimeout(type, tempTypeSpeed);-->
+<!--                    }-->
 
-                return {
-                    type: type };
+<!--                };-->
 
-            }
+<!--                return {-->
+<!--                    type: type };-->
 
-            var typer = document.getElementById('typewriter');
+<!--            }-->
 
-            typewriter = setupTypewriter(typewriter);
+<!--            var typer = document.getElementById('typewriter');-->
 
-            typewriter.type();
-            //# sourceURL=pen.js
-        </script>
+<!--            typewriter = setupTypewriter(typewriter);-->
+
+<!--            typewriter.type();-->
+<!--            //# sourceURL=pen.js-->
+<!--        </script>-->
     </div>
 
 <!--    hero supporting text-->
@@ -502,34 +504,36 @@
 
 
 <!-- Copyright Date -->
-<script>
-    const d = new Date();
-    let year = d.getFullYear();
-    document.getElementById("date").innerHTML = year;
-</script>
+<script src="assets/js/copyright-year.js"></script>
+<!--<script>-->
+<!--    const d = new Date();-->
+<!--    let year = d.getFullYear();-->
+<!--    document.getElementById("date").innerHTML = year;-->
+<!--</script>-->
 
 
 <!--JavaScript for disabling form submissions if there are invalid fields-->
-<script>
-    (() => {
-        'use strict'
+<script src="assets/js/bs-validation.js"></script>
+<!--<script>-->
+<!--    (() => {-->
+<!--        'use strict'-->
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation')
+<!--        // Fetch all the forms we want to apply custom Bootstrap validation styles to-->
+<!--        const forms = document.querySelectorAll('.needs-validation')-->
 
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
+<!--        // Loop over them and prevent submission-->
+<!--        Array.from(forms).forEach(form => {-->
+<!--            form.addEventListener('submit', event => {-->
+<!--                if (!form.checkValidity()) {-->
+<!--                    event.preventDefault()-->
+<!--                    event.stopPropagation()-->
+<!--                }-->
 
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })()
-</script>
+<!--                form.classList.add('was-validated')-->
+<!--            }, false)-->
+<!--        })-->
+<!--    })()-->
+<!--</script>-->
 
 <!--mixpanel script-->
 <script>
