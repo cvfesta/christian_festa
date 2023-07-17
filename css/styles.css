@@ -207,7 +207,7 @@
     transition: transform 0.025s ease-in-out;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
-.nav-link:focus, .nav-link:hover, a:hover, .contactLink:hover{
+.nav-link:focus, .nav-link:hover, .list-group-item:hover, .contactLink:hover{
     color: rgba(var(--bs-info-rgb))!important;
 }
 
